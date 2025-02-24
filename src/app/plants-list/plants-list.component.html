@@ -1,3 +1,6 @@
+
+<div class="card">
+  <div class="card-body">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -9,27 +12,15 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <tr>
+
+    <tr *ngFor="let plant of plants">
       <td><img [src]="plant.image" [alt]="plant.image" width="100" height="100"></td>
       <td>{{plant.name}}</td>
       <td>{{plant.type}}</td>
       <td>{{plant.price}}</td>
       <td>{{plant.stock}}</td>
-
-    </tr>
-    <tr>
-      <td><img [src]="plant2.image" [alt]="plant2.image" width="100" height="100"></td>
-      <td>{{plant2.name}}</td>
-      <td>{{plant2.type}}</td>
-      <td>{{plant2.price}}</td>
-      <td>{{plant2.stock}}</td>
-    </tr>
-    <tr>
-      <td><img [src]="plant3.image" [alt]="plant3.image" width="100" height="100"></td>
-      <td>{{plant3.name}}</td>
-      <td>{{plant3.type}}</td>
-      <td>{{plant3.price}}</td>
-      <td>{{plant3.stock}}</td>
     </tr>
   </tbody>
 </table>
+  </div>
+</div>
