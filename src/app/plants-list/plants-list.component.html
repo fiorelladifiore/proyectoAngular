@@ -1,6 +1,4 @@
 
-<div class="card">
-  <div class="card-body">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -9,11 +7,12 @@
       <th>Tipo</th>
       <th>Precio</th>
       <th>Stock</th>
+      <th>Compra</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
     @for (plant of plants; track plant.name){
-    <tr>
+    <tr [ngClass]="{'clearance':plant.clearance}">
       <td><img [src]="plant.image" [alt]="plant.image" width="100" height="100"></td>
       <td>{{plant.name | titlecase}}</td>
       <td>{{plant.type}}</td>
@@ -23,6 +22,11 @@
       }@else{
       <td><span class="badge text-bg-success">sin stock!</span></td>
       }
+      <td>
+        <button class="btn btn-secondary">-</button>
+        {{plant.quantity}}
+        <button class="btn btn-secondary">+</button>
+      </td>
     </tr>
     } @empty{
       <tr>
@@ -31,5 +35,5 @@
     }
   </tbody>
 </table>
-  </div>
-</div>
+
+

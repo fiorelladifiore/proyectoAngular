@@ -5,4 +5,5 @@ export interface Plants{
   price: number;
   stock: number;
   clearance: boolean;
+  quantity: number;
 }
