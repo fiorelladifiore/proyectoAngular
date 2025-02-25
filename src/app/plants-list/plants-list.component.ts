@@ -15,21 +15,24 @@ export class PlantsListComponent {
     "name": "Monstera deliciosa",
     "type": "Araceae",
     "price": 200,
-    "stock": 3
+    "stock": 3,
+    "clearance": false,
   },
   {
     "image": "/img/potus.png",
     "name": "Potus",
     "type": "Araceae",
     "price": 300,
-    "stock": 4
+    "stock": 4,
+    "clearance": true,
   },
   {
     "image": "/img/sansevieria.png",
     "name": "Sansevieria enana",
     "type": "Asparagaceae",
-    "price": 120,
-    "stock": 7
+    "price": 1200,
+    "stock": 0,
+    "clearance": false,
   }
   ]
 }
