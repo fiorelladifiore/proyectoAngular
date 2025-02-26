@@ -1,5 +1,5 @@
 
-<table class="table table-bordered">
+<table class="table table-bordered text-center">
   <thead>
     <tr>
       <th></th>
@@ -12,23 +12,35 @@
   </thead>
   <tbody class="table-group-divider">
     @for (plant of plants; track plant.name){
-    <tr [ngClass]="{'clearance':plant.clearance}">
+    <tr>
       <td><img [src]="plant.image" [alt]="plant.image" width="100" height="100"></td>
       <td>{{plant.name | titlecase}}</td>
       <td>{{plant.type}}</td>
-      <td>{{plant.price | currency}}</td>
+      @if(plant.clearance){
+      <td class="sale">Oferta {{plant.price | currency}}</td>
+      }@else{
+        <td>{{plant.price | currency}}</td>
+      }
       @if(plant.stock>0){
       <td>{{plant.stock}}</td>
       }@else{
       <td><span class="badge text-bg-success">sin stock!</span></td>
       }
       <td>
-        <div class="form-group">
+        <div class="input-group">
+          @if(plant.stock){
+          <div class="input-group">
+            <div class="input-group-prepend">
             <button class="btn btn-secondary" (click)="downQuantity(plant)">-</button>
-                <input class="smallInput" type="number"
+            </div>
+                <input type="text" class="text-center"
                 [(ngModel)]="plant.quantity"
                 (focusout)="checkQuantity(plant)"/>
+            <div class="input-group-append">
             <button class="btn btn-secondary" (click)="upQuantity(plant)">+</button>
+            </div>
+          </div>
+          }
         </div>
       </td>
     </tr>

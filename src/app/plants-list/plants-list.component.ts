@@ -34,10 +34,29 @@ export class PlantsListComponent {
     name: "Sansevieria enana",
     type: "Asparagaceae",
     price: 1200,
-    stock: 0,
+    stock: 2,
     clearance: false,
     quantity: 0,
-  }
+  },
+  {
+      image: "/img/palodeagua.png",
+      name: "Palo de agua",
+      type: "Asparagaceae",
+      price: 3500,
+      stock: 7,
+      clearance: false,
+      quantity: 0,
+  },
+  {
+      image: "/img/singonio.png",
+      name: "Singonio",
+      type: "Araceae",
+      price: 5900,
+      stock: 0,
+      clearance: false,
+      quantity: 0,
+  },
+
 ];
 
   upQuantity(plant:Plants): void{
