@@ -24,7 +24,26 @@ th{
 }
 
 button{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
   background-color: #2d3a22;
 }
+
+
+.smallInput{
+  width: 40px;
+}
+
+.form-group{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+
 
 

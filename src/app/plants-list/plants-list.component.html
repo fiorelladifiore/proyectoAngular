@@ -23,9 +23,13 @@
       <td><span class="badge text-bg-success">sin stock!</span></td>
       }
       <td>
-        <button class="btn btn-secondary">-</button>
-        {{plant.quantity}}
-        <button class="btn btn-secondary">+</button>
+        <div class="form-group">
+            <button class="btn btn-secondary" (click)="downQuantity(plant)">-</button>
+                <input class="smallInput" type="number"
+                [(ngModel)]="plant.quantity"
+                (focusout)="checkQuantity(plant)"/>
+            <button class="btn btn-secondary" (click)="upQuantity(plant)">+</button>
+        </div>
       </td>
     </tr>
     } @empty{
