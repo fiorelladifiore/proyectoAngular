@@ -1,6 +1,7 @@
 import {Component, numberAttribute} from '@angular/core';
 import {Plants} from './Plants';
 
+
 @Component({
   selector: 'app-plants-list',
   standalone: false,
@@ -9,7 +10,6 @@ import {Plants} from './Plants';
   styleUrl: './plants-list.component.scss'
 })
 export class PlantsListComponent {
-  inputValue: string = '';
   plants: Plants[] = [
     {
     image: "/img/monstera.png",
@@ -59,27 +59,15 @@ export class PlantsListComponent {
 
 ];
 
-  upQuantity(plant:Plants): void{
-    if(plant.stock>plant.quantity) {
-      plant.quantity++;
-    }
+  maxReached(m: string): void{
+    alert(m);
   }
 
-  downQuantity(plant:Plants): void{
-    if(plant.quantity>0) {
-      plant.quantity--;
-    }
+  minReached(m: string): void{
+    alert(m);
   }
 
 
-    checkQuantity(plant:Plants): void {
-      if(plant.quantity > plant.stock) {
-        alert("No hay suficientes plantas en stock");
-      }
-      if(plant.quantity < 0) {
-        alert("No se pueden encargar plantas negativas:)");
-      }
-      plant.quantity = 0;
-  }
+
 
 }

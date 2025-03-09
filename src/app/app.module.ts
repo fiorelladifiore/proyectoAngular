@@ -9,6 +9,7 @@ import { ViveroHomeComponent } from './vivero-home/vivero-home.component';
 import { ViveroPlantsComponent } from './vivero-plants/vivero-plants.component';
 import { PlantsCartComponent } from './plants-cart/plants-cart.component';
 import { ViveroAboutComponent } from './vivero-about/vivero-about.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ViveroAboutComponent } from './vivero-about/vivero-about.component';
     ViveroHomeComponent,
     ViveroPlantsComponent,
     PlantsCartComponent,
-    ViveroAboutComponent
+    ViveroAboutComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

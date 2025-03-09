@@ -27,21 +27,10 @@
       <td><span class="badge text-bg-success">sin stock!</span></td>
       }
       <td>
-        <div class="input-group">
-          @if(plant.stock){
-          <div class="input-group">
-            <div class="input-group-prepend">
-            <button class="btn btn-secondary" (click)="downQuantity(plant)">-</button>
-            </div>
-                <input type="text" class="text-center"
-                [(ngModel)]="plant.quantity"
-                (focusout)="checkQuantity(plant)"/>
-            <div class="input-group-append">
-            <button class="btn btn-secondary" (click)="upQuantity(plant)">+</button>
-            </div>
-          </div>
-          }
-        </div>
+        @if(plant.stock){
+              <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)" (minReached)="minReached($event)"></app-input-integer>
+
+        }
       </td>
     </tr>
     } @empty{
