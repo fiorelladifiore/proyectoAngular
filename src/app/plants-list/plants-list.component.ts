@@ -1,5 +1,6 @@
 import {Component, numberAttribute} from '@angular/core';
 import {Plants} from './Plants';
+import {PlantCartService} from '../plant-cart.service';
 
 
 @Component({
@@ -52,12 +53,22 @@ export class PlantsListComponent {
       name: "Singonio",
       type: "Araceae",
       price: 5900,
-      stock: 0,
+      stock: 3,
       clearance: false,
       quantity: 0,
   },
 
 ];
+  constructor(private cart: PlantCartService){
+
+  }
+
+  addToCart(plant: Plants):void{
+    this.cart.addToCart(plant);
+    plant.stock -= plant.quantity;
+    plant.quantity=0;
+
+  }
 
   maxReached(m: string): void{
     alert(m);

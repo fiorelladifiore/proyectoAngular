@@ -1,1 +1,36 @@
-<h3> acá va el carrito </h3>
+
+
+
+
+          <div class="card-body p-5">
+
+            <div class="row">
+
+                <table>
+                <thead>
+                <tr>
+                  <th>Carrito de compras</th>
+                </tr>
+                </thead>
+                <div class="card mb-50">
+                  @for(plant of (cartList$ | async); track plant.name){
+                    <tr>
+                         <td><img [src]="plant.image" [alt]="plant.image" width="70" height="70"></td>
+                      <td>{{plant.name}}:</td>
+                      <td>{{plant.quantity}} x</td>
+                      <td>{{plant.price | currency}}</td>
+                      </tr>
+
+                  } @empty {
+                    <h3>Todavía no agregaste elementos al carrito...</h3>
+                  }
+                </div>
+                  </table>
+
+              </div>
+            </div>
+
+
+
+
+

@@ -1,0 +1,52 @@
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
+
+
+.card-body{
+  border-radius: 15px;
+  background-color: #b6e196;
+  margin: 10px auto;
+}
+
+tr{
+
+  border-bottom: 1px solid black;
+}
+
+
+.py-5 {
+  background-color: antiquewhite;
+}
+
+.row{
+  border-radius: 10px;
+  border: 2px solid seagreen;
+  background-color: #d4fbb1;
+  margin: auto auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+
+td{
+
+  vertical-align: middle;
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+p{
+  padding-left: 2px;
+}
+
+img{
+  border-radius: 50px;
+}

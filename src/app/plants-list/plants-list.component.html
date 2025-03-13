@@ -7,6 +7,7 @@
       <th>Tipo</th>
       <th>Precio</th>
       <th>Stock</th>
+      <th>Cantidad</th>
       <th>Compra</th>
     </tr>
   </thead>
@@ -26,12 +27,14 @@
       }@else{
       <td><span class="badge text-bg-success">sin stock!</span></td>
       }
-      <td>
         @if(plant.stock){
+          <td>
               <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)" (minReached)="minReached($event)"></app-input-integer>
-
+          </td>
+          <td>
+          <button class="btn btn-secondary" (click)="addToCart(plant)">Comprar</button>
+          </td>
         }
-      </td>
     </tr>
     } @empty{
       <tr>
