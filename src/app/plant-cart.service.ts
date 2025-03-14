@@ -20,7 +20,6 @@ export class PlantCartService {
     }else{
       item.quantity += plant.quantity;
     }
-    console.log(this._cartList)
     this.cartList.next(this._cartList);
 
   }

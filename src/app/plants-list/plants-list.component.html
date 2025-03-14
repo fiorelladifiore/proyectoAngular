@@ -30,9 +30,12 @@
         @if(plant.stock){
           <td>
               <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)" (minReached)="minReached($event)"></app-input-integer>
+
           </td>
           <td>
+            @if(plant.quantity){
           <button class="btn btn-secondary" (click)="addToCart(plant)">Comprar</button>
+            }
           </td>
         }
     </tr>

@@ -12,10 +12,10 @@ import {Plants} from '../plants-list/Plants';
 export class InputIntegerComponent {
 
   @Input()
-  quantity!: number;
+  quantity: number;
 
   @Input()
-  max!: number;
+  max: number;
 
   @Output()
   quantityChange: EventEmitter<number>= new EventEmitter<number>();
@@ -44,14 +44,17 @@ export class InputIntegerComponent {
     }
   }
 
-  checkQuantity(): void {
+  checkQuantity(): void{
     if(this.quantity > this.max) {
-      alert("No hay suficientes plantas en stock");
+      this.quantity = 0;
+      alert("No hay suficiente stock disponible");
     }
     if(this.quantity < 0) {
-      alert("No se pueden encargar plantas negativas:)");
+      this.quantity = 0;
     }
-    this.quantity = 0;
+    this.quantityChange.emit(this.quantity);
+
+
   }
 
 
