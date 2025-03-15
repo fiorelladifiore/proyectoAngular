@@ -33,7 +33,7 @@ export class PlantsListComponent implements OnInit{
   }
 
   maxReached(m: string): void{
-    alert(m);
+      alert(m);
   }
 
   minReached(m: string): void{

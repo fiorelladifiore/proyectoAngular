@@ -1,5 +1,5 @@
 
-<table class="table table-bordered text-center">
+<table class="table table-responsive table-bordered text-center">
   <thead>
     <tr>
       <th></th>
@@ -8,7 +8,7 @@
       <th>Precio</th>
       <th>Stock</th>
       <th>Cantidad</th>
-      <th>Compra</th>
+      <th>Comprar</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
@@ -30,7 +30,6 @@
         @if(plant.stock){
           <td>
               <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)" (minReached)="minReached($event)"></app-input-integer>
-
           </td>
           <td>
             @if(plant.quantity){

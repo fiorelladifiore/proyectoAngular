@@ -1,17 +1,19 @@
 
 input{
-  max-width: 40px;
+  max-width: 38px;
 }
 
 button{
-  max-width: 35px;
+  white-space: nowrap;
+  flex-direction: column;
+  display: flex;
+  max-width: 33px;
   background-color: #2d3a22;
 
 }
 
 
 .input-group{
-
   flex-wrap: nowrap;
 }
 

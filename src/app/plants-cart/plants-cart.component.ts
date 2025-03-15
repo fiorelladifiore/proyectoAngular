@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {PlantCartService} from '../plant-cart.service';
 import {Plants} from '../plants-list/Plants';
-import {Observable} from 'rxjs';
+import {map, Observable, tap} from 'rxjs';
 
 @Component({
   selector: 'app-plants-cart',
@@ -17,5 +17,11 @@ export class PlantsCartComponent {
       this.cartList$ = cart.cartList.asObservable();
     }
 
-
+  getTotal(): Observable<number> {
+    return this.cartList$.pipe(
+      map((items: Plants[]) =>
+        items.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+      )
+    );
+  }
 }

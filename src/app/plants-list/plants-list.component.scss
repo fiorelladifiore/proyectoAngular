@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-td{
-
+td {
+  width: 120px;
   vertical-align: middle;
   background: transparent;
   border: transparent;
@@ -20,12 +20,8 @@ th{
 }
 
 
-
-
-
 .sale{
   color: red;
-  text-align: justify;
 }
 
 table{
@@ -33,7 +29,7 @@ table{
 }
 
 button{
-  border: 10px;
+  white-space: nowrap;
   max-width: 100px;
   background-color: #2d3a22;
 

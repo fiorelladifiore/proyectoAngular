@@ -1,13 +1,8 @@
-<div class="input-group">
-    <div class="input-group">
-      <div class="input-group-prepend">
+
+<div class="input-group custom-input-group">
         <button class="btn btn-secondary" (click)="downQuantity()">-</button>
-      </div>
-      <input type="text" class="text-center"
+      <input type="text" class="form-control text-center"
              [(ngModel)]="quantity"
-             (focusout)="checkQuantity()"/>
-      <div class="input-group-append">
-        <button class="btn btn-secondary" (click)="upQuantity()">+</button>
-      </div>
-    </div>
+             (focusout)="checkQuantity()" readonly/>
+        <button class="btn btn-secondary" id="liveAlertBtn" (click)="upQuantity()">+</button>
 </div>
