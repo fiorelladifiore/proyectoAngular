@@ -3,6 +3,6 @@
         <button class="btn btn-secondary" (click)="downQuantity()">-</button>
       <input type="text" class="form-control text-center"
              [(ngModel)]="quantity"
-             (focusout)="checkQuantity()" readonly/>
-        <button class="btn btn-secondary" id="liveAlertBtn" (click)="upQuantity()">+</button>
+             (focusout)="checkQuantity()"/>
+        <button class="btn btn-secondary" (click)="upQuantity()">+</button>
 </div>
