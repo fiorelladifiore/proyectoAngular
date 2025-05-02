@@ -9,27 +9,52 @@ nav {
 
 .nav-link, footer, h4{
   font-family: Muli, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 2px;
 }
 
 footer{
   color: #1c3209;
-  padding: 10px;
-  background-color: #b5fd79;
+  padding: 5px;
+  background-color: #cff4b1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.marca{
-  align-items: end;
-}
+
 
 .container{
   background-color: #ffe5d1;
   display: contents;
   max-width: 100%;
+}
+
+.foot1, .foot2{
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartimg{
+  width: 50px;
+  background-color: transparent;
+  align-items: flex-end;
+}
+
+.btn{
+  border: rgb(81, 81, 81) 1px solid;
+}
+
+.buttons{
+  display: flex;
+
+}
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 

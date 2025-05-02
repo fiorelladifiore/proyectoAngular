@@ -1,5 +1,12 @@
-
-<table class="table table-responsive table-bordered text-center">
+@if(loading){
+  <div class="d-flex justify-content-center align-items-center" style="height: 1000px;">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  }@else{
+<div class="table-responsive">
+  <table class="table table-bordered text-center">
   <thead>
     <tr>
       <th></th>
@@ -45,5 +52,6 @@
     }
   </tbody>
 </table>
-
+</div>
+  }
 
